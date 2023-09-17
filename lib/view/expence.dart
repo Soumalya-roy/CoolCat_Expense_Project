@@ -241,8 +241,13 @@ class _MyExpenseState extends State<MyExpense> {
                       })
             ]),
         body: expenseList.length == 0
-            ? Center(
-                child: Text("No Expense added!!"),
+            ? Column(
+                children: [
+                  Chart(expenseList),
+                  Center(
+                    child: Text("No Expense added!!"),
+                  ),
+                ],
               )
             : Column(
                 children: [
