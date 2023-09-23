@@ -16,19 +16,6 @@ class _MyExpenseState extends State<MyExpense> {
 
   var exp_title = TextEditingController();
 
-  //var _numberController = TextEditingController();
-
-  // Widget amt_text() {
-  //   return TextField(
-  //       controller: _numberController,
-  //       keyboardType: TextInputType.number,
-  //       inputFormatters: <TextInputFormatter>[
-  //         FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-  //         FilteringTextInputFormatter.digitsOnly
-  //       ]);
-  // }
-
-  // ignore: non_constant_identifier_names
   var exp_amount = TextEditingController();
   List<ExpenseModel> expenseList = [];
 
@@ -230,13 +217,13 @@ class _MyExpenseState extends State<MyExpense> {
                   ? IconButton(
                       icon: Icon(Icons.search, color: Colors.blue),
                       onPressed: () {
-                        is_search = false;
+                        is_search = true;
                         setState(() {});
                       })
                   : IconButton(
                       icon: Icon(Icons.close, color: Colors.red),
                       onPressed: () {
-                        is_search = true;
+                        is_search = false;
                         setState(() {});
                       })
             ]),
